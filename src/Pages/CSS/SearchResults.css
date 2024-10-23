@@ -1,0 +1,115 @@
+/* Main Search Container */
+.search {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    margin-top: 10px;
+    display: flex;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+}
+
+/* Search Header */
+.search-div {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+    font-size: 24px;
+}
+
+/* Product Card */
+.search-product {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin: 15px; /* Increased margin for spacing */
+    padding: 15px;
+    width: 220px; /* Slightly wider for better layout */
+    text-align: center;
+    transition: transform 0.2s;
+    margin-top: 50px;
+}
+
+/* Hover Effect */
+.search-product:hover {
+    transform: scale(1.02); /* Slight scale effect on hover */
+}
+
+/* Image Style */
+.search-img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+
+/* Product Title and Price */
+.search-product h2 {
+    font-size: 18px;
+    margin: 10px 0;
+    color: #333;
+}
+
+.search-product p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 10px; /* Added margin for spacing */
+}
+
+/* Size Selection Section */
+.productdisplay-right-size {
+    margin: 10px 0; /* Compact margin */
+}
+
+.search-product-size-options {
+    display: flex;
+    justify-content: center;
+    gap: 5px; /* Reduced gap */
+}
+
+.size-option {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px 8px; /* Smaller padding */
+    font-size: 14px; /* Smaller font */
+    cursor: pointer;
+    transition: background 0.3s, border-color 0.3s; /* Shortened property names */
+}
+
+.size-option:hover {
+    background: #f1f1f1; /* Light gray on hover */
+}
+
+.size-option.selected {
+    background: plum; /* Green background for selected */
+    color: white; /* White text */
+    border-color: #fce3fe; /* Match border color */
+}
+
+/* Add to Cart Button */
+.search-product button {
+    background-color: plum; /* Green background */
+    color: white; /* White text */
+    border: none; /* Remove border */
+    border-radius: 4px; /* Rounded corners */
+    padding: 10px 15px; /* Padding for button */
+    font-size: 16px; /* Font size */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s, transform 0.2s; /* Smooth transitions */
+    margin-top: 10px; /* Space above button */
+}
+
+.search-product button:hover {
+    background-color: plum; /* Darker green on hover */
+    transform: scale(1.05); /* Slightly increase size on hover */
+}
+
+.search-product button:focus {
+    outline: none; /* Remove outline on focus */
+    box-shadow: 0 0 0 2px rgba(40, 167, 69, 0.5); /* Add a shadow for focus state */
+}
+
+.search-product button:disabled {
+    background-color: #ccc; /* Gray background for disabled state */
+    cursor: not-allowed; /* Change cursor for disabled state */
+}

@@ -1,6 +1,6 @@
 import React from "react";
 import './Offers.css'
-import model01 from '../images/items/model01.png'
+import model from '../images/model.png'
 const Offers=()=>{
     return(
     <div className="offers">
@@ -11,7 +11,7 @@ const Offers=()=>{
             <button>Check now</button>
         </div>
         <div className="offers-right">
-            <img src={model01} alt="" />
+            <img src={model} alt="" />
         </div>
     </div>)
 }

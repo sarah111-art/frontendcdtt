@@ -1,14 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
 import App from './App';
+import './index.css';
 //import reportWebVitals from './reportWebVitals';
+import { ToastProvider } from 'react-toast-notifications';
 import ShopContextProvider from './Context/ShopContext';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <ShopContextProvider>
+     <ToastProvider>
+
+
       <App />
+     </ToastProvider>
   </ShopContextProvider>
 );
 

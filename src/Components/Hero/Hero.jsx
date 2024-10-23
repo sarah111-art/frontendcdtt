@@ -1,6 +1,6 @@
 import React from "react"
-import avatar1 from '../images/avatars/avatar1.jpg'
-import hand from '../images/icons/flags/hand.png'
+import model2 from '../images/model2.png'
+import hand from '../images/hand.png'
 import './Hero.css'
 const Hero =()=>{
     return(
@@ -21,7 +21,7 @@ const Hero =()=>{
             </div>
              </div>
               <div className="hero-right">
-            <img src={avatar1} alt="" />
+            <img src={model2} alt="" />
             </div>
         </div>
     );

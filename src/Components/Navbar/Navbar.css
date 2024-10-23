@@ -1,30 +1,44 @@
-.navbar{
+:root {
+    --primary-color: #ff4141;
+    --text-color: #171717;
+    --secondary-text-color: #626262;
+    --button-color: #f3f3f3;
+    --hover-button-color: #c31fb5;
+    --background-color: white;
+    --border-color: #7a7a7a;
+}
+
+.navbar {
     display: flex;
     justify-content: space-around;
     padding: 16px;
     box-shadow: 0 1px 3px -2px black;
     align-items: center;
 }
-.nav-logo{
+
+.nav-logo {
     display: flex;
     align-items: center;
     gap: 10px;
 }
-.nav-logo p{
-    color: #171717;
-    font-size :38px;
+
+.nav-logo p {
+    color: var(--text-color);
+    font-size: 38px;
     font-weight: 600;
 }
-.nav-menu{
+
+.nav-menu {
     display: flex;
     align-items: center;
     gap: 50px;
     list-style: none;
-    color: #626262;
+    color: var(--secondary-text-color);
     font-size: 20px;
     font-weight: 500;
 }
-.nav-menu li{
+
+.nav-menu li {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -32,35 +46,40 @@
     gap: 3px;
     cursor: pointer;
 }
-.nav-menu hr{
-    border:none ;
+
+.nav-menu hr {
+    border: none;
     width: 80%;
     height: 3px;
     border-radius: 10px;
-    background: #FF4141;
+    background: var(--primary-color);
 }
-.nav-login-cart{
+
+.nav-login-cart {
     display: flex;
     align-items: center;
     gap: 45px;
 }
-.nav-login-cart button{
+
+.nav-login-cart button {
     width: 157px;
     height: 58px;
     outline: none;
-    border: 1px solid #7a7a7a;
+    border: 1px solid var(--border-color);
     border-radius: 75px;
     color: #515151;
     font-size: 20px;
     font-weight: 500;
-    background: white;
+    background: var(--background-color);
     cursor: pointer;
+    transition: background 0.3s ease;
 }
 
-.nav-login-cart button:active{
-    background: #f3f3f3;
+.nav-login-cart button:hover {
+    background: var(--button-color);
 }
-.nav-cart-count{
+
+.nav-cart-count {
     width: 22px;
     height: 22px;
     display: flex;
@@ -73,57 +92,85 @@
     background: red;
     color: white;
 }
-.nav-dropdown{
+
+.nav-dropdown {
     display: none;
 }
-.nav-login-cart .nav-cart-icon{
+
+.nav-login-cart .nav-cart-icon {
     width: 60px;
 }
-.navbar .nav-logo .nav-text{
+
+.navbar .nav-logo .nav-text {
     color: black;
     font-family: Poppins;
-    font-size: 50px ;
+    font-size: 50px;
     font-style: oblique;
 }
-@media  (max-width :1280px){
-    .navbar{
+
+.nav-search {
+    display: flex;
+    align-items: center;
+}
+
+.nav-search input {
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.nav-search button {
+    padding: 0.5rem;
+    margin-left: 0.5rem;
+    background-color: #fde1ff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.nav-search button:hover {
+    background-color: var(--hover-button-color);
+}
+
+@media (max-width: 1280px) {
+    .navbar {
         padding: 12px 50px;
     }
-    .nav-logo img{
+    .nav-logo img {
         width: 40px;
     }
-    .nav-logo p{
+    .nav-logo p {
         font-size: 25px;
-
     }
-    .nav-menu{
+    .nav-menu {
         gap: 30px;
         font-size: 16px;
-
     }
-    .nav-logo-cart{
+    .nav-login-cart {
         gap: 30px;
     }
-    .nav-login-cart button{
+    .nav-login-cart button {
         width: 120px;
         height: 45px;
         font-size: 16px;
     }
-    .nav-cart-count{
+    .nav-cart-count {
         margin-left: -40px;
         font-size: 12px;
     }
 }
-@media(max-width:1024px)
-{
-    .navbar{
-        padding: 12px 30px;     
+
+@media (max-width: 1024px) {
+    .navbar {
+        padding: 12px 30px;
     }
-    .nav-menu{
+    .nav-menu {
         gap: 25px;
-        font-size:14px ;
+        font-size: 14px;
     }
-    .nav-login-cart button{
+    .nav-login-cart button {
         width: 80px;
         height: 35px;
         font-size: 14px;
@@ -131,40 +178,81 @@
     .nav-login-cart img {
         width: 30px;
     }
-    .nav-cart-count{
+    .nav-cart-count {
         width: 18px;
         height: 18px;
     }
 }
-@media(max-width:800px){
-.navbar{
-    padding: 10px 0px;
-}
-.nav-dropdown
-{
-display: block;
-width: 30px;
-rotate: -90deg;
-transition: 0.5s;
-}
-.nav-menu
-{
-    display: none;
-    height: 80px;
-    width: 100%;
-    position: absolute;
-    background-color: white;
-    justify-content:center 
-    ;
-    top: 50px;
 
+@media (max-width: 800px) {
+    .navbar {
+        padding: 10px 0;
+    }
+    .nav-dropdown {
+        display: block;
+        width: 30px;
+        transform: rotate(-90deg);
+        transition: transform 0.5s;
+    }
+    .nav-menu {
+        display: none;
+        height: 80px;
+        width: 100%;
+        position: absolute;
+        background-color: var(--background-color);
+        justify-content: center;
+        top: 50px;
+    }
+    .nav-menu-visible {
+        display: flex;
+    }
+    .nav-dropdown.open {
+        transform: rotate(90deg);
+    }
 }
-.nav-menu-visible{
-    display:flex ;
+.nav-search {
+    display: flex;
+    align-items: center;
+    margin: 20px;
+}
 
-}
-.nav-dropdown.open{
-    transform: rotate(90deg);
+.nav-search input {
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    flex-grow: 1; /* Cho phép input chiếm toàn bộ không gian còn lại */
+    transition: border 0.3s ease;
 }
 
+.nav-search input:focus {
+    border-color: #c31fb5; /* Đổi màu viền khi focus */
+    outline: none;
+}
+
+.nav-search button {
+    padding: 0.5rem 1rem;
+    margin-left: 0.5rem;
+    background-color: plum;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s ease;
+}
+
+.nav-search button:hover {
+    background-color: purple; /* Đổi màu khi hover */
+}
+
+@media (max-width: 600px) {
+    .nav-search{
+        flex-direction: column; /* Chuyển thành dạng cột trên màn hình nhỏ */
+        align-items: stretch; /* Mở rộng để chiếm toàn bộ chiều rộng */
+    }
+    
+    .nav-search input {
+        margin-bottom: 10px; /* Khoảng cách giữa input và nút */
+    }
 }

@@ -1,24 +1,36 @@
 import React from "react";
-import './Item.css'
+import './Item.css';
 import { Link } from "react-router-dom";
-const Item =(props)=>{
+
+const Item = (props) => {
+    // Tính toán giá giảm và tỷ lệ giảm giá
+    const oldPrice = parseFloat(props.old_price);
+    const newPrice = parseFloat(props.new_price);
+    const discountPercentage = oldPrice ? Math.round(((oldPrice - newPrice) / oldPrice) * 100) : 0;
+
     return (
         <div className="item">
-           <Link to={`/product/${props.id}`}><img onClick={window.scrollTo(0,0)} src={props.image} alt="" /></Link> 
+            <Link to={`/product/${props.id}`}>
+                <img onClick={() => window.scrollTo(0, 0)} src={props.image} alt={props.name} />
+            </Link>
             <p>{props.name}</p>
             <div className="item-prices">
-
                 <div className="item-price-new">
-                    {props.new_price}
+                    ${newPrice.toFixed(2)}
                 </div>
-
-                <div className="item-price-old">
-                    {props.old_price}
-                </div>
-                
+                {oldPrice > newPrice && (
+                    <div className="item-price-old">
+                        ${oldPrice.toFixed(2)}
+                    </div>
+                )}
+                {discountPercentage > 0 && (
+                    <div className="discount-badge">
+                        {discountPercentage}% Giảm Giá
+                    </div>
+                )}
             </div>
         </div>
     );
-
 }
-export default Item
+
+export default Item;

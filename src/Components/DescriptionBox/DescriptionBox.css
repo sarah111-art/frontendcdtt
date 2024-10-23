@@ -1,38 +1,118 @@
-.descriptionbox{
-    margin: 120px 170px;
-}
-.descriptionbox-navigator{
+.descriptionbox-navigator {
     display: flex;
+    margin-bottom: 20px;
+}
 
+.descriptionbox-nav-box {
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background 0.3s ease;
 }
-.descriptionbox-nav-box{
+
+.descriptionbox-nav-box:hover {
+    background-color: rgba(255, 65, 65, 0.1); /* Light hover effect */
+}
+
+.descriptionbox-nav-box.active {
+    font-weight: bold;
+    border-bottom: 2px solid #ff4141; /* Highlight active tab */
+}
+
+.descriptionbox-content {
+    padding: 15px;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    background-color: var(--background-color);
+    margin-bottom: 50px;
+}
+.descriptionbox-reviews {
+    margin-top: 20px;
+}
+
+.descriptionbox-reviews h3 {
+    margin-bottom: 10px;
+}
+
+.descriptionbox-reviews ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.descriptionbox-reviews li {
+    margin-bottom: 10px;
+    padding: 10px;
+    background: var(--background-color);
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+}
+
+.descriptionbox-reviews textarea {
+    width: 100%;
+    height: 80px;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+}
+
+.descriptionbox-reviews button {
+    padding: 10px 20px;
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.descriptionbox-reviews button:hover {
+    background: darken(var(--primary-color), 10%);
+}
+.star-rating {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 16px;
-    font-weight: 600;
-    width: 171px;
-    height: 70px;
-    border: 1px solid #d0d0d0;
+    margin-bottom: 10px;
 }
-.descriptionbox-nav-box.fade{
-    background: #BFBFBF;
-    color: #555;
+
+.star {
+    cursor: pointer;
+    color: #d3d3d3; /* Unfilled star color */
+    font-size: 24px; /* Adjust size as needed */
 }
-.descriptionbox-description{
-    display: flex;
-    flex-direction: column;
-    gap: 25px;
-    border: 1px solid #D0D0D0;
-    padding: 48px;
-    padding-bottom: 70px;
+
+.star.filled {
+    color: var(--primary-color); /* Filled star color */
 }
-@media(max-width:1280px){
-    .descriptionbox{
-        margin: 60px;
-    }
-    .descriptionbox-description{
-        font-size: 14px;
-    }
-    
+
+.descriptionbox-reviews ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.descriptionbox-reviews li {
+    margin-bottom: 10px;
+    padding: 10px;
+    background: var(--background-color);
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+}
+
+.descriptionbox-reviews textarea {
+    width: 100%;
+    height: 80px;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+}
+
+.descriptionbox-reviews button {
+    padding: 10px 20px;
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.descriptionbox-reviews button:hover {
+    background: darken(var(--primary-color), 10%);
 }

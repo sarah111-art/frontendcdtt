@@ -61,3 +61,29 @@
         width: 160px;
     }
 }
+.product-price {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.product-price-old {
+    font-size: 20px;
+    color: #818181;
+    text-decoration: line-through;
+}
+
+.product-price-new {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ff4141;
+}
+
+.discount-badge {
+    background-color: #ff4141;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 600;
+}

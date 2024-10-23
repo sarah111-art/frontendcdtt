@@ -45,6 +45,7 @@ let all_product=[
     image:item1,
     new_price:50.00,
     old_price:80.00,
+    size:"",
   },
   { 
     id:2,

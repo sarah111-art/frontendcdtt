@@ -1,9 +1,9 @@
 import React from "react";
-import logoweb from '../images/logoweb.png'
+import { FaPinterest, FaWhatsapp } from "react-icons/fa";
 import { IoLogoInstagram } from "react-icons/io";
-import { FaWhatsapp } from "react-icons/fa";
-import { FaPinterest } from "react-icons/fa";
-import './Footer.css'
+import ChatBot from "../chatbot/chatbot";
+import logoweb from '../images/logoweb.png';
+import './Footer.css';
 const Footer =()=>{
     return(
         <div className="footer">
@@ -35,7 +35,9 @@ const Footer =()=>{
     <hr/>
     <p>Copyright @2024 - All Right Resered. </p>
 </div>
+<ChatBot />
         </div>
+        
     )
 }
 export default Footer
